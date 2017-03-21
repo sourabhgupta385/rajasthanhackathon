@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link type="text/css" rel="stylesheet" href="main.css" />
+     <link href="cssblog/bootstrap.min.css" rel="stylesheet">
+     <link href="cssblog/blog-home.css" rel="stylesheet">
+     
+     <title>New Post</title>
+</head>
+
+<style>
+.button {
+  border-radius: 1px;
+  background-color: #990000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 0px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Log Out</a>
+                    </li>
+                  
+					
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+  <h2 style="padding-left:500px">New Idea</h2>
+  <div class="container">
+        <div class="row">
+            <div class="col-md-8" style="padding-left:300px">
+				<form action="_post.jsp" method="post">
+				<label>
+						<div>E-MAIL ADDRESS</div>
+						
+							<input type="text" name="uwername" value="">
+				
+					</label>
+					<label>
+						<div>TITLE</div>
+						
+							<input type="text" name="subject" value="">
+				
+					</label>
+					<label>
+			
+						<div>IDEA DESCRIPTION</div>
+						
+						
+							<textarea style="height:200px" name="content"></textarea>
+					</label>
+					
+					<div style="padding-left:175px">
+						<button class="button"><span>Post Idea </span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
